@@ -1,0 +1,30 @@
+{
+  "name": "@nickmorton/yes-admin-common",
+  "version": "1.0.0",
+  "description": "YES Administration common",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/nickmorton/yes-admin-common.git"
+  },
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run clean && npm run build",
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "clean-build": "npm run clean && npm run build",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "lint-fix": "tslint -c tslint.json --project tsconfig.json --fix"
+  },
+  "author": "Nick Morton",
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {}
+}
