@@ -20,6 +20,9 @@ export interface IUserVisit {
 }
 
 export class UserValidator extends ValidatorBase<IUser> {
+	public static defaultDobYear = new Date(2000, 0, 1);
+	public static maximumDob = new Date();
+
 	constructor() {
 		super([
 			{
