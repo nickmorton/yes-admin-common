@@ -1,4 +1,4 @@
-import { ValidationRuleFactory, ValidatorBase } from '../lib';
+import { IPagedRequest, ValidationRuleFactory, ValidatorBase } from '../lib';
 import { CrisisSupportCode, FamilySupportCode, IIndividualBase, IssueCode, JobSearchFrequencyCode } from './';
 
 export interface IUser extends IIndividualBase {
@@ -11,6 +11,10 @@ export interface IUser extends IIndividualBase {
 	jobSearchFrequency: JobSearchFrequencyCode;
 	lastVisited: Date;
 	visits: IUserVisit[];
+}
+
+export interface IUserGetRequest extends IPagedRequest {
+	name?: string;
 }
 
 export interface IUserVisit {

@@ -4,11 +4,10 @@ export interface IRequest<TData> {
 	data: TData;
 }
 
-export interface IPagedRequest<TCriteria> {
+export interface IPagedRequest {
 	// Search params are always strings.
 	skip: string | number;
 	limit: string | number;
-	criteria?: TCriteria;
 	[index: string]: any;
 }
 
