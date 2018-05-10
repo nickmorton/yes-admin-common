@@ -13,7 +13,7 @@ export interface IUser extends IIndividualBase {
 	visits: IUserVisit[];
 }
 
-export interface IUserGetRequest extends IPagedRequest {
+export interface IUserGetRequest extends IPagedRequest<IUser> {
 	name?: string;
 }
 

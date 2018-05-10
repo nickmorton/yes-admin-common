@@ -4,11 +4,14 @@ export interface IRequest<TData> {
 	data: TData;
 }
 
-export interface IPagedRequest {
-	// Search params are always strings.
-	skip: string | number;
+export type TEntitySort<TEntity> = {
+	[k in keyof TEntity]?: 1 | -1;
+};
+
+export interface IPagedRequest<TEntity extends IModelBase> {
 	limit: string | number;
-	[index: string]: any;
+	skip: string | number;
+	sort?: TEntitySort<TEntity>;
 }
 
 export interface IResponse<TEntity extends IModelBase> {
