@@ -1,14 +1,8 @@
 import { IPagedRequest, ValidationRuleFactory, ValidatorBase } from '../lib';
 import { CrisisSupportCode, FamilySupportCode, IIndividualBase, IssueCode, JobSearchFrequencyCode } from './';
+import { EmploymentStatusCode, HousingStatusCode } from './';
 
 export interface IUser extends IIndividualBase {
-	crisisSupport: CrisisSupportCode[];
-	familySupport: FamilySupportCode;
-	hasCurrentCV: boolean;
-	hasSkillsToFindJob: boolean;
-	isSearchingForJob: boolean;
-	jobInterviewsInLastMonth: number;
-	jobSearchFrequency: JobSearchFrequencyCode;
 	lastVisited: Date;
 	visits: IUserVisit[];
 }
@@ -18,9 +12,18 @@ export interface IUserGetRequest extends IPagedRequest<IUser> {
 }
 
 export interface IUserVisit {
+	crisisSupport: CrisisSupportCode[];
 	date: Date;
-	wasByAppointment: boolean;
+	employmentStatus: EmploymentStatusCode;
+	familySupport: FamilySupportCode;
+	housingStatus: HousingStatusCode;
 	issue: IssueCode;
+	hasCurrentCV: boolean;
+	hasSkillsToFindJob: boolean;
+	isSearchingForJob: boolean;
+	jobInterviewsInLastMonth: number;
+	jobSearchFrequency: JobSearchFrequencyCode;
+	wasByAppointment: boolean;
 }
 
 export class UserValidator extends ValidatorBase<IUser> {
