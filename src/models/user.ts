@@ -1,5 +1,14 @@
 import { IPagedRequest, ValidationRuleFactory, ValidatorBase } from '../lib';
-import { CrisisSupportCode, FamilySupportCode, IIndividualBase, IssueCode, JobSearchFrequencyCode } from './';
+import {
+	ContactTypeCode,
+	CrisisSupportCode,
+	FamilySupportCode,
+	IIndividualBase,
+	IssueCode,
+	JobSearchFrequencyCode,
+	VisitTimeCode
+} from './';
+
 import { EmploymentStatusCode, HousingStatusCode } from './';
 
 export interface IUser extends IIndividualBase {
@@ -12,6 +21,7 @@ export interface IUserGetRequest extends IPagedRequest<IUser> {
 }
 
 export interface IUserVisit {
+	contactType: ContactTypeCode;
 	crisisSupport: CrisisSupportCode[];
 	date: Date;
 	employmentStatus: EmploymentStatusCode;
@@ -23,6 +33,7 @@ export interface IUserVisit {
 	isSearchingForJob: boolean;
 	jobInterviewsInLastMonth: number;
 	jobSearchFrequency: JobSearchFrequencyCode;
+	visitTime: VisitTimeCode;
 	wasByAppointment: boolean;
 }
 
