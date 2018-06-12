@@ -11,4 +11,5 @@ export * from './enums/visit-time-code';
 export * from './individual-base';
 export * from './staff-member';
 export * from './user';
+export * from './user-visit';
 export * from './volunteer';
