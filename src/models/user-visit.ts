@@ -11,7 +11,7 @@ import {
 } from './';
 
 export interface IUserVisit extends IModelBase {
-	userId: string;
+	_userId: string;
 	contactType: ContactTypeCode;
 	crisisSupport: CrisisSupportCode[];
 	date: Date;

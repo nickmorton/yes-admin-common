@@ -1,6 +1,6 @@
 {
   "name": "@nickmorton/yes-admin-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "YES Administration common",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
