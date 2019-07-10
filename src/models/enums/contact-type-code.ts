@@ -1,6 +1,7 @@
 export enum ContactTypeCode {
-	email = 'Email',
-	inPerson = 'In person',
-	phone = 'Phone call',
-	socialMedia = 'Social media',
+	unknown = 0,
+	'Email',
+	'In person',
+	'Phone call',
+	'Social media',
 }

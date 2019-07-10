@@ -1,5 +1,6 @@
 export enum VisitTimeCode {
-	am = 'AM',
-	pm = 'PM',
-	eve = 'EVE',
+	unknown = 0,
+	'AM',
+	'PM',
+	'EVE',
 }

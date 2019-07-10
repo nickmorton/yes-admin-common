@@ -17,11 +17,11 @@ export interface IUserVisit extends IModelBase {
 	date: Date;
 	employmentStatus: EmploymentStatusCode;
 	familySupport: FamilySupportCode;
-	housingStatus: HousingStatusCode;
-	issue: IssueCode;
 	hasCurrentCV: boolean;
 	hasSkillsToFindJob: boolean;
+	housingStatus: HousingStatusCode;
 	isSearchingForJob: boolean;
+	issue: IssueCode;
 	jobInterviewsInLastMonth: number;
 	jobSearchFrequency: JobSearchFrequencyCode;
 	visitTime: VisitTimeCode;
