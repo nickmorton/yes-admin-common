@@ -27,7 +27,7 @@ And in the referencing project folder, run:
 
 `npm unlink @nickmorton/yes-admin-common`
 
-To publish to npm, first log in to npm using:
+To publish to npm, first uptick the version in `package.json`, then log in to npm using:
 
 `npm login`
 
